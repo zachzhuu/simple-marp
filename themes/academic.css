@@ -4,82 +4,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/* Regular */
+@font-face {
+  font-family: 'CMUSans';
+  src: url('fonts/cmunss.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'CMUSans';
+  src: url('fonts/cmunsx.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Italic (Oblique)
+@font-face {
+  font-family: 'CMUSans';
+  src: url('fonts/cmunso.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+} */
+
+/* Bold Italic (Oblique Bold) – optional if you have it */
+/* @font-face {
+  font-family: 'CMUSans';
+  src: url('fonts/cmunsxo.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+} */
+
 :root {
   --color-background: #fff;
   --color-foreground: #333;
-  --color-highlight: #800000;
+  --color-highlight: #093B66;
+  --primary: #093B66;
+  --plain-text: 0.85em;
 }
 
 section {
   background-image: none;
-  font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 90px;
-  padding-left: 40px;
-  padding-right: 40px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'CMUSans', sans-serif;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /* https://github.com/marp-team/marpit/issues/271 */
 section::after {
-  font-weight: 700;
+  font-weight: 100;
   content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
 }
 
-ul ul {
-  font-size: 0.9em;
-}
-
 section.lead h1 {
-  color: #800000;
+  color: var(--primary);
   text-align: left;
 }
 section.lead h1 strong {
-  -webkit-text-stroke: 1px #800000;
+  -webkit-text-stroke: 1px var(--primary);
 }
 section.lead h2 {
-  color: #800000;
+  color: var(--primary);
   text-align: left;
 }
 section.lead h2 strong {
-  -webkit-text-stroke: 1px #800000;
+  -webkit-text-stroke: 1px var(--primary);
 }
 section.lead h3 {
-  color: #800000;
+  color: var(--primary);
   text-align: left;
 }
 section.lead h3 strong {
-  -webkit-text-stroke: 1px #800000;
+  -webkit-text-stroke: 1px var(--primary);
 }
 section.lead h4 {
-  color: #800000;
+  color: var(--primary);
   text-align: left;
 }
 section.lead h4 strong {
-  -webkit-text-stroke: 1px #800000;
+  -webkit-text-stroke: 1px var(--primary);
 }
 section.lead h5 {
-  color: #800000;
+  color: var(--primary);
   text-align: left;
 }
 section.lead h5 strong {
-  -webkit-text-stroke: 1px #800000;
+  -webkit-text-stroke: 1px var(--primary);
 }
 section.lead p {
   text-align: right;
 }
 
+p {
+  font-size: var(--plain-text);
+}
+
+ul, ol {
+  font-size: var(--plain-text);
+  /* line-height: 0.8em; */
+}
+
+sup {
+  font-size: 0.6em;
+  vertical-align: super; /* optional */
+  color:var(--primary);
+}
+
 header {
-  background-color: #800000;
+  background-color: var(--primary);
   color: #fff;
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 blockquote {
   max-width: 90%;
-  border-top: 0.1em dashed #555;
+  border-top: 0.1em solid #555;
   font-size: 60%;
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
 }
 blockquote::before {
   content: "";
@@ -95,4 +141,33 @@ img[alt~="center"] {
 
 code {
   font-family: 'Source Code Pro', monospace;
+}
+
+/* Definition Block */
+section .block {
+  border-radius: 20px;
+  background: #EBEBF7;
+  padding: 0.4em 0.6em;
+  margin-top: 0.6em;
+  font-size: var(--plain-text);
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06); */
+}
+
+section .block .title {
+  background-color: #045073;
+  color: white;
+  font-weight: bold;
+  font-size: var(--plain-text);
+  padding: 0.4em 0.6em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: -0.44em -0.65em 0.4em -0.65em;
+}
+
+section .block p:first-of-type {
+  margin-top: 0;
+}
+
+section .block strong {
+  font-weight: bold;
 }
