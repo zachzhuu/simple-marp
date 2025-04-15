@@ -13,7 +13,7 @@ style: |
 
 <!-- _class: lead -->
 
-## Language-Based Scene Understanding for Mobile Robot
+## Diffusion Model-Based Scene Understanding for Mobile Robot
 
 #### UCMP6050 Assignment 5
 
@@ -48,7 +48,7 @@ Fig. 2 Triangulation strategy<sup>2</sup>.
 
 <div class="block">
   <div class="title">Environment Intelligence</div>
-  <p>Environmental intelligence refers to human-like, holistic 3D scene understanding that integrates <strong>perception, interaction, learning, and reasoning</strong>.
+  <p>Environment intelligence refers to human-like, holistic 3D scene understanding that integrates <strong>perception, interaction, learning, and reasoning</strong>.
   </p>
 </div>
 
